@@ -253,7 +253,8 @@ namespace MatchDetailsManagementSystem
             Console.WriteLine($"The highest Score is:{highestScore}");
             int LowestScore = tm.Min(match => Math.Min(match.HomeTeamScore, match.AwayTeamScore));
             Console.WriteLine($"The Lowest Score is:{LowestScore}");
-            double AverageScore = (double)totalgoalsScored / tm.Count();
+            int matchCount = tn.Count();
+            double AverageScore = (double)totalgoalsScored / (matchcount*2);
             Console.WriteLine($"The Average Score is{AverageScore}");
         }
         public void ShowSportStatistics()
@@ -270,9 +271,8 @@ namespace MatchDetailsManagementSystem
             Console.WriteLine($"The highest Score is:{highestScore1}");
             int LowestScore1 = tn.Min(match => Math.Min(match.HomeTeamScore, match.AwayTeamScore));
             Console.WriteLine($"The Lowest Score is:{LowestScore1}");
-            //    double AverageScore1 = (double)totalgoalsScored1 / tn.Count();
             int matchCount = tn.Count();
-            double AverageScore1 = (double)totalgoalsScored1 / matchCount; 
+            double AverageScore1 = (double)totalgoalsScored1 / (matchCount*2); 
             Console.WriteLine($"The Average Score is{AverageScore1}");
         }
         public void SearchMatches()
